@@ -1,0 +1,85 @@
+/* 1. on change le fond de la page */
+body {
+    /* on met lenom exact d'une photo dans notre fichier se trouvant css et html*/
+    background-image: url(suupra.jpg);
+
+    /*ces 3 lignes magiques pour que l'image soit belle*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(suupra.jpg);
+  
+    background-size: cover;     /*l'image remplit tout l'ecran*/
+    background-position: center;    /*image bien centrer*/
+    background-attachment: fixed;   /*image bouge pas qd on scrolle*/
+   
+
+
+    /*change la couleur du texte blanc pour une bonne visibilite ecrite*/
+    color:whitesmoke ;
+    font-family: sans-serif;
+    padding: 40px; /* On ajoute un peu d'espace sur les cote*/
+}
+
+/*on cree un style pour tout balise dans section */
+section {
+    background: rgba(255, 255, 255, 0.1);   /*un fond blanc tres transparent*/
+    backdrop-filter: blur(10px);              /*pour flouter les fond d'ecriture*/
+    padding: 20px;                            /*gerer flou*/
+    margin-bottom: 20px;                      /*separer les blocs flou*/
+    border-radius: 15px;                      /*arrondir bordure background*/
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 800px;                         /* pour pas que le txte soit trop large*/
+}
+
+/*on change un peu la couleur des titres h2 dans les sections */
+h2 {
+    color: #00d4ff; /*un bleu neon qui va bien avec supra*/
+    border-bottom: 2px solid #00d4ff;   /*solid cest pour souligner avec couleur*/
+    display: inline-block; /*ca c'est pour ajuster le souligner  au titre*/
+    padding-bottom: 5px;
+
+}
+
+/*le header avec photo*/
+.header-content {
+    display: flex;          /* Met la photo et le texte côte à côte */
+    align-items: center;    /* Aligne les deux au même niveau vertical */
+    gap: 20px;              /* Espace entre ta photo et ton texte */
+    margin-bottom: 30px;    /* Espace avant de commencer les sections */
+}
+
+/* On crée le style pour ta photo (l'indice . veut dire classe) */
+.profile-pic {
+    width: 100px;           /* Taille de ta photo */
+    height: 100px;
+    border-radius: 50%;     /* INDICE : Rend la photo ronde */
+    border: 3px solid #00d4ff; /* Petit contour bleu pour le style */
+    object-fit: cover;      /* Pour ne pas déformer ton visage */
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #00d4ff;
+    object-fit: cover;
+
+    /* 1. On zoom un peu dans l'image pour avoir de la marge */
+    transform: scale(1.2); 
+    
+    /* 2. On déplace l'image vers le haut (Y) */
+    /* -10px fera monter la photo à l'intérieur du rond */
+    object-position: top 10px;
+    object-position: top 10px; 
+}
+body {
+    /* ... tes autres codes (image, cover, etc.) ... */
+    
+    display: flex;
+    flex-direction: column;
+    
+    /* MODIFICATION ICI : On aligne à gauche au lieu de centrer */
+    align-items: flex-start; 
+    
+    /* On ajoute de la marge à gauche pour ne pas coller le bord de l'écran */
+    padding-left: 10%; 
+    padding-top: 40px;
+}
